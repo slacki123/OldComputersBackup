@@ -1,0 +1,16 @@
+package main;
+
+public class Location {
+	
+	private String weather;
+	private String positionFromStartingLocation;
+	
+
+	}
+	
+	
+	public void Location() {
+		
+	
+
+}

@@ -1,0 +1,32 @@
+package main;
+
+import java.util.Scanner;
+
+public class Game {
+	
+	static Scanner sc = new Scanner(System.in);
+	
+	private String gameName;
+	
+	public static void startNewGame(Player newPlayer) {
+		
+		Player playerName;
+		
+		Player.setPlayerName(playerName);
+		
+		Location.locationChoice(newPlayer);
+		
+		
+	}
+	
+		
+		
+		
+//		System.out.println("What is you name? (Type your name below)");
+//		String playerName = sc.next();
+//		System.out.println("Hello there brave " + playerName);
+		
+	}
+	
+
+

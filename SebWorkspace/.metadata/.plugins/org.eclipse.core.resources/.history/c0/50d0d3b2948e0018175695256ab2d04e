@@ -1,0 +1,50 @@
+package junitPeople;
+
+import java.util.ArrayList;
+
+public class Person {
+
+	private String name;
+	private String job;
+	private int age;
+	static ArrayList<Person> people = new ArrayList<Person>();
+	
+
+	public Person(String name, int age, String job) {
+		this.name = name;
+		this.age = age;
+		this.job = job;
+		people.add(this);
+	}
+
+	public String getName() {
+		return name;
+	}
+	
+	public static int getArraySize() {
+		return people.size();
+	}
+
+	@Override
+	public String toString() {
+		return name + " " + age + " " + job;
+	}
+
+	public static Person returnPeople() {
+		for (Person p : people) {
+			return p;
+		}
+		return null;
+	}
+	
+
+	public static Person searchPerson(String name) {
+		for (Person p : people) {
+			if (p.getName().equals(name)) {
+				return p;
+			}
+		}
+		return null;
+	}
+
+}

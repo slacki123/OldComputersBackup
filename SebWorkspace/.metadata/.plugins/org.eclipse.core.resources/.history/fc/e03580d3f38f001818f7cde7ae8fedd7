@@ -1,0 +1,33 @@
+package morseCode;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class Morse {
+
+	static String[] alphabet = new String[] { "a", "b", "c", "d", "e", "f", "g", "h", "i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"," " };
+//	static char[] alphabet = new char[] { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',' '};
+	static String[] morseCode = new String[] { ".- ", "-... ","-.-. ", "-.. ",". ","..-. ","--. ",".... ",".. ",".--- ","-.- ",".-.. ","-- ","-.", "---",".--. ", "--.- ", ".-. ", "... ", "-", "..- ", "...- ", ".-- ", "-..- ", "-.-- ", "--.. ", "/ " };
+	static ArrayList<String> translationArr = new ArrayList<String>();
+	
+	public static void translateToMorse(String input) {
+		
+		for (char ch : input.toCharArray()) {
+				
+			String translation;
+			System.out.println(Arrays.asList(alphabet).indexOf(ch));
+
+			translation = morseCode[1];
+			translationArr.add(translation);
+		}
+			
+		
+	}
+		
+		
+
+	
+		
+
+
+}

@@ -1,0 +1,13 @@
+package guessing;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		Game game = new Game();
+		game.generateNumber();
+		System.out.println(game.humanGuess(0));
+		
+		
+	}
+
+}

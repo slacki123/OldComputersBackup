@@ -1,0 +1,105 @@
+package guessing;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class Game {
+	Random rand = new Random();
+	private int computercorrectNumber;
+	private int humanCorrectNumber;
+	private int computerInitialGuess = rand.nextInt(15);
+
+	
+	Scanner sc = new Scanner(System.in);
+	
+	boolean temp = true;
+	
+	public void setHumanCorrectNumber(int input) {
+		this.humanCorrectNumber = input;
+	}
+
+	public int getCorrectNumber() {
+		return computercorrectNumber;
+	}
+
+	public void setCorrectNumber(int correctNumber) {
+		this.computercorrectNumber = correctNumber;
+	}
+
+	public int generateNumber() {
+		computercorrectNumber = rand.nextInt(20);
+		return computercorrectNumber;
+	}
+	
+	
+	public void computerGuess() {
+		int difference = computerInitialGuess - humanCorrectNumber;
+
+		if (difference < 0) {
+			computerInitialGuess = computerInitialGuess +1;}
+		else if (difference > 0) {
+			computerInitialGuess = computerInitialGuess -1; }
+		else {	
+		temp=false;
+		}
+		}
+
+
+	
+	public String humanGuess(int guess) {
+
+		int difference = guess - computercorrectNumber;
+
+		if (difference < 0) {
+			return "higher";
+		}
+
+		else if (difference > 0) {
+			return "lower";
+		}
+
+		else {
+			temp = false;
+			return "Spot on!";
+			
+		}
+
+	}
+	
+	public void loop() {
+		while(temp) {
+		
+		try {
+			int input;
+			System.out.print(">");
+			input = sc.nextInt();
+			System.out.println(humanGuess(input));
+		} catch (Exception e) {
+			System.out.println("Must be an integer!");
+			temp = false;
+		} 
+	
+		}
+	}
+	
+	public void humanVsComputer() {
+		System.out.println("Guess a number!");
+		generateNumber();
+		loop();
+	
+	}
+	
+	public void computerVsHuman() {
+		int input;
+		System.out.println("Please choose a number for the computer to guess");
+		System.out.print(">");
+		input = sc.nextInt();
+		setHumanCorrectNumber(input);
+		computerGuess();
+		
+		
+		
+		
+	}
+
+}

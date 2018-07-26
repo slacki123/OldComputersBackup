@@ -1,0 +1,29 @@
+package workingWithFiles;
+
+import java.util.ArrayList;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Person p1 = new Person("John", "Doctor", 31);
+		Person p2 = new Person("James", "Engineer", 22);
+		Person p3 = new Person("Joe", "Shopkeeper", 41);
+		Person p4 = new Person("Jake", "Student", 17);
+		Person p5 = new Person("Julian", "Farmer", 26);
+		
+		ArrayList<Person> list = new ArrayList<Person>();
+		list.add(p1);
+		list.add(p2);
+		list.add(p3);
+		list.add(p4);
+		list.add(p5);
+		
+		for(Person p : list) {
+			System.out.println(p);
+		}
+	
+
+	}
+
+}

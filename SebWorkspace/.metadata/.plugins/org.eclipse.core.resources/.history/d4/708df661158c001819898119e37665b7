@@ -1,0 +1,45 @@
+package main;
+
+import java.util.Scanner;
+
+public class Game {
+	
+	static Scanner sc = new Scanner(System.in);
+	
+	private String gameName;
+	
+	
+	public static void startNewGame() {
+		Player newPlayer = new Player("John", "Starting Location");
+		
+		String name;
+		System.out.println("Please type your name below:");
+		name = sc.nextLine();
+		
+		newPlayer.setPlayerName(name);
+		System.out.println("Welcome " + newPlayer.getPlayerName());
+		System.out.println("You are at the castle, where would you like to go?\n 1. North \n 2. South \n 3. East \n 4. West \nPlease type below:");
+		
+		String locationChoice; 
+		locationChoice = sc.nextLine().toLowerCase();
+		
+		newPlayer.setPlayerLocation(locationChoice);
+		
+		System.out.println("So you decide to go " + newPlayer.getPlayerLocation() + "...");
+		System.out.println("The weather here is" );
+		
+		
+		
+	}
+	
+		
+		
+		
+//		System.out.println("What is you name? (Type your name below)");
+//		String playerName = sc.next();
+//		System.out.println("Hello there brave " + playerName);
+		
+	}
+	
+
+

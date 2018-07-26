@@ -1,0 +1,27 @@
+package practice;
+
+import javafx.application.Application;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
+
+public class Main extends Application {
+
+	public static void main(String[] args) {
+		
+	@Override
+	public void start(Stage primaryStage) throws Exception{
+	Button btn = new Button("Ass");
+	StackPane root = new StackPane();
+	root.setAlignment(Pos.TOP_CENTER);
+	root.getChildren().add(btn);
+	Scene scene = new Scene(root,300,300);
+	primaryStage.setTitle("JavaFX Frame");
+	primaryStage.setScene(scene);
+	primaryStage.show();
+		
+	}
+
+
+	}
+
+}

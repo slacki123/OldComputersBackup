@@ -1,0 +1,18 @@
+package junitPeople;
+
+
+public class PeopleTest {
+	
+	public String searchPerson(String name) {
+		for(People p : people) {
+			if(p.getName().equals(name)) {
+				
+			}
+	}
+
+	
+}
+
+   
+
+}

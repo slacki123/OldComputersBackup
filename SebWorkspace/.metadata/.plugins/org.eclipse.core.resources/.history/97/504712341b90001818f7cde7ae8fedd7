@@ -1,0 +1,22 @@
+package factoryPattern;
+
+import java.util.Scanner;
+
+public class Main {
+//	
+//	Scanner sc = new Scanner(System.in);
+//	String input = sc.nextLine();
+	
+	public static void main(String[] args) {
+		
+		MapObject obj = MapObjectFactory.makeMapObject("weapon");
+		obj.getObjectName();
+	}
+	
+
+	
+	
+	
+	
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;factoryPattern.Sword&apos; to &apos;Weapon&apos;&#x0D;&#x0A;- Original project: &apos;FactoryDesignPattern&apos;&#x0D;&#x0A;- Original element: &apos;factoryPattern.Sword&apos;&#x0D;&#x0A;- Renamed element: &apos;factoryPattern.Weapon&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Sword&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;factoryPattern{Sword.java[Sword" matchStrategy="1" name="Weapon" qualified="false" references="true" similarDeclarations="false" stamp="1532507345599" textual="false" version="1.0"/>
+</session>

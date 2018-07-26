@@ -1,0 +1,47 @@
+package TestForClassTest;
+
+import static org.junit.Assert.assertEquals;
+
+import java.util.Scanner;
+
+import org.junit.Test;
+
+import main.Game;
+import main.Player;
+
+
+public class TestForClassTest {
+	
+	//Player test
+	
+	
+	@Test
+	public void setPlayerNameTest() {
+		Player player = new Player("John", "Starting Location");	
+		player.setPlayerName("Seb");
+		assertEquals("The name doesn't match", "Seb", player.getPlayerName());
+	}
+	
+	@Test
+	public void setPlayerLocationTest() {
+		Player player = new Player("John", "Starting Location");	
+		player.setPlayerLocation("north");
+		assertEquals("The name doesn't match", "North", player.getPlayerLocation());
+	}
+	
+	@Test
+	public void playerNameSetTest() {
+	Scanner sc = new Scanner(System.in);
+	Player newPlayer = new Player("John", "Starting Location");
+	
+	String name;
+	System.out.println("Please type your name below:");
+	name = sc.nextLine();
+	
+	newPlayer.setPlayerName(name);
+	System.out.println("Welcome " + newPlayer.getPlayerName());
+	System.out.println("You are at the castle, where would you like to go?\n 1. North \n 2. South \n 3. East \n 4. West \nPlease type below:");
+	}
+	
+		
+}

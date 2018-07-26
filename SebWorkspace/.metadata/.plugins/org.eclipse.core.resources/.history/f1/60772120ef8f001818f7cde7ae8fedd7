@@ -1,0 +1,18 @@
+package morseCode;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class Morse {
+
+	String[] alphabet = new String[] { "a", "b", "c", "d", "e", "f", "g", "h", "i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"," " };
+	String[] morseCode = new String[] { ".- ", "-... ","-.-. ", "-.. ",". ","..-. ","--. ",".... ",".. ",".--- ","-.- ",".-.. ","-- ","-.", "---",".--. ", "--.- ", ".-. ", "... ", "-", "..- ", "...- ", ".-- ", "-..- ", "-.-- ", "--.. ", "/ " };
+
+	public static void translateToMorse(String input) {
+		
+		String translation;
+		translation = morseCode[Arrays.asList(alphabet).indexOf(input)];
+
+	}
+
+}

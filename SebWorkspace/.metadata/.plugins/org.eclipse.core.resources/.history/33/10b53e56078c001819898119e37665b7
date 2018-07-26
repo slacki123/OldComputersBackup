@@ -1,0 +1,29 @@
+package TestForClassTest;
+
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Test;
+
+import main.Game;
+import main.Player;
+
+
+public class TestForClassTest {
+	
+	//Player test
+	
+	@Test
+	public void getPlayerNameTest() {
+		Player player = new Player("John");	
+		assertEquals("The name doesn't match", "John", player.getPlayerName());
+		
+	}
+	
+	@Test
+	public void setPlayerNameTest() {
+		Player player = new Player("John");	
+		player.setPlayerName("Seb");
+		assertEquals("The name doesn't match", "Seb", player.getPlayerName());
+	}
+		
+}

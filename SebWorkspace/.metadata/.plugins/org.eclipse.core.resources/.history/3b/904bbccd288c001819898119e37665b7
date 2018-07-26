@@ -1,0 +1,22 @@
+package main;
+
+public class Location {
+	
+	private String weather;
+	private String positionFromStartingLocation;
+	
+
+	
+	
+	public static String getWeather(Player newPlayer) {
+		if(newPlayer.getPlayerLocation().equals("North")) {
+			return "cold and snowy";
+		}
+		else if (newPlayer.getPlayerLocation().equals("South")) {
+			return "warm";
+		}else
+		return "like a home should be";
+		
+	
+
+}}

@@ -1,0 +1,50 @@
+package main;
+
+import java.util.Scanner;
+
+public class Location {
+	
+	static Scanner sc = new Scanner(System.in);
+	
+	private String weather;
+	private String positionFromStartingLocation;
+	
+		
+	public Location(String direction, String weather) {
+		this.weather = weather;
+		this.positionFromStartingLocation = direction;
+	}
+	
+	
+	public String getWeather() {
+		return weather;
+	}
+
+	public void setWeather(String weather) {
+		this.weather = weather;
+	}
+
+	public String getLocation() {
+		return positionFromStartingLocation;
+	}
+
+	public void setLocation(String location) {
+		this.positionFromStartingLocation = location;
+	}
+	
+	static public void locationChoice(Player newPlayer) {
+		
+		String locationChoice; 
+		locationChoice = sc.nextLine().toLowerCase();
+		
+		newPlayer.setPlayerLocation(locationChoice);
+		
+		System.out.println("So you decide to go " + newPlayer.getPlayerLocation() + "...");
+		System.out.println("The weather here is" );
+		System.out.println("Type in 'back' to go back to starting position");
+		locationChoice = sc.nextLine().toLowerCase();
+		newPlayer.setPlayerLocation(locationChoice);
+		System.out.println("You are back at the castle");
+	}
+
+}

@@ -1,0 +1,14 @@
+package morseCode;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+	System.out.println(Morse.translateToMorse("suck my wolly"));
+	
+	System.out.println(Morse.translateToAlphabet("... ..- -.-"));
+
+
+	}
+
+}

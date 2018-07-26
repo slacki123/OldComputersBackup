@@ -1,0 +1,27 @@
+package factoryPattern;
+
+import java.util.Scanner;
+
+public class Main {
+	
+	
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.print(">");
+		String input = sc.nextLine();
+		MapObject obj = MapObjectFactory.makeMapObject(input);
+		
+		System.out.println(obj.getObjectName());
+		System.out.println(obj.getObjectCoordinates());
+		System.out.println(obj.getAttribute());
+		
+	}
+	
+
+	
+	
+	
+	
+
+}

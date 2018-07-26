@@ -1,0 +1,24 @@
+package junitPeople;
+
+public class Person {
+	
+	private String name;
+	private String job;
+	private int age;
+
+	public Person(String name, int age, String job) {
+		this.name = name;
+		this.age = age;
+		this.job = job;
+	}
+	
+	public String toString() {
+		return name + " " + age + " " + job;
+	}
+	
+	public String getName() {
+		return name;
+	}
+	
+	
+}

@@ -1,0 +1,17 @@
+package junitPeople;
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class People {
+
+	ArrayList<Person> people = new ArrayList<Person>();
+
+
+		}
+		return
+	
+
+	}
+
+}

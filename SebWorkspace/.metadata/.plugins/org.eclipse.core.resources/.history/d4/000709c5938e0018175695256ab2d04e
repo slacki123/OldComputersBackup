@@ -1,0 +1,34 @@
+package junitPeople;
+
+
+import static org.junit.Assert.*;
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+import org.junit.Test;
+
+public class PeopleTest {
+	
+	@Test
+	public void addPeopleTest() {
+		ArrayList<Person> people = new ArrayList<Person>();
+		Person p1 = new Person("John", 21, "Farmer");
+		Person p2 = new Person("Jacob", 22, "Student");
+		Person p3 = new Person("Mike", 42, "Actor");
+		Person p4 = new Person("Kirsty", 42, "Programmer");
+		assertEquals("Array has not populated", 4, Person.getArraySize());
+	}
+	
+	@Test
+	public void getNameTest() {
+		Person p1 = new Person("John", 21, "Farmer");
+		assertEquals("Wrong name", "John", p1.getName());
+	}
+
+   @Test
+   public void searchPersonTest() {
+	   
+   }
+
+}

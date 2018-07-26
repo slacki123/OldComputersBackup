@@ -1,0 +1,42 @@
+package guessing;
+
+import java.util.Random;
+
+public class Game {
+
+	private int correctNumber;
+
+	Random rand = new Random();
+
+	public int getCorrectNumber() {
+		return correctNumber;
+	}
+
+	public void setCorrectNumber(int correctNumber) {
+		this.correctNumber = correctNumber;
+	}
+
+	public int generateNumber() {
+		correctNumber = (int) Math.random() * 20;
+		return correctNumber;
+	}
+
+	public String humanGuess(int guess) {
+
+		int difference = guess - correctNumber;
+
+		if (difference < 0) {
+			return "higher";
+		}
+
+		else if (difference > 0) {
+			return "lower";
+		}
+
+		else {
+			return "Spot on!";
+		}
+
+	}
+
+}

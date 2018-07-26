@@ -1,0 +1,33 @@
+package main;
+
+import java.util.Scanner;
+
+public class Player {
+	
+	private String playerName;
+	private String playerLocation; //StartingLocation Is "castle"
+	
+	public Player(String playerName, String playerLocation) {
+		this.playerName = playerName;
+		this.playerLocation = playerLocation;
+	}
+	
+	public String getPlayerName() {
+		return playerName;
+	}
+	public void setPlayerName(String playerName) {
+		this.playerName = playerName;
+	}
+	public String getPlayerLocation() {
+		
+		
+		return playerLocation;
+	}
+	public void setPlayerLocation(String playerLocation) {
+		this.playerLocation = playerLocation;
+	}
+	
+	
+	
+
+}

@@ -1,0 +1,9 @@
+package factoryPattern;
+
+public class MapObjectFactory {
+	
+	public static MapObject makeMapObject(String object) {
+		if()
+	}
+
+}

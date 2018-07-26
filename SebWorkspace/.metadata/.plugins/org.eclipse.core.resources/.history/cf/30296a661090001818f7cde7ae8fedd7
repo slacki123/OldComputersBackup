@@ -1,0 +1,18 @@
+package guessingTest;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import guessing.Game;
+
+public class GuessingGameTest {
+	
+	@Test
+	public void generateNumber() {
+		Game game = new Game();
+		
+		assertNotNull("Null", game.generateNumber());
+	}
+
+}

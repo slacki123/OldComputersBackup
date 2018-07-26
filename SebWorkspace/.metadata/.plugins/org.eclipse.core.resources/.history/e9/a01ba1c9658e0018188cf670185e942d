@@ -1,0 +1,61 @@
+package workingWithFiles;
+
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Person p1 = new Person("John", "Doctor", 31);
+		Person p2 = new Person("James", "Engineer", 22);
+		Person p3 = new Person("Joe", "Shopkeeper", 41);
+		Person p4 = new Person("Jake", "Student", 17);
+		Person p5 = new Person("Julian", "Farmer", 26);
+
+		ArrayList<Person> list = new ArrayList<Person>();
+		list.add(p1);
+		list.add(p2);
+		list.add(p3);
+		list.add(p4);
+		list.add(p5);
+
+		BufferedWriter bw = null;
+		try {
+
+			File file = new File("C:\\Users\\Profile\\Documents\\SebWorkspace\\myfile.txt");
+
+			if (!file.exists()) {
+				file.createNewFile();
+			}
+			FileWriter fw = new FileWriter(file);
+			bw = new BufferedWriter(fw);
+			PrintWriter out = new PrintWriter(bw);
+			for (Person p : list) {
+				String mycontent = p.getName();
+				out.write(mycontent);
+				out.write("\n");
+				System.out.println(p);
+			}
+
+			System.out.println("File written Successfully");
+
+		} catch (IOException ioe) {
+			ioe.printStackTrace();
+		} finally {
+			try {
+				if (bw != null)
+					bw.close();
+			} catch (Exception ex) {
+				System.out.println("Error in closing the BufferedWriter" + ex);
+			}
+
+		}
+
+	}
+
+}

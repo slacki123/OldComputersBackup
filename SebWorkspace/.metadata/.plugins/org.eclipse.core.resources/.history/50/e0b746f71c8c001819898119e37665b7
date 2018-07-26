@@ -1,0 +1,33 @@
+package main;
+
+public class Location {
+	
+	private String weather;
+	private String positionFromStartingLocation;
+	
+	Location
+		
+	public Location(String direction, String weather) {
+		this.weather = weather;
+		this.positionFromStartingLocation = direction;
+	}
+	
+	
+	public String getWeather() {
+		return weather;
+	}
+
+	public void setWeather(String weather) {
+		this.weather = weather;
+	}
+
+	public String getLocation() {
+		return positionFromStartingLocation;
+	}
+
+	public void setLocation(String location) {
+		this.positionFromStartingLocation = location;
+	}
+	
+
+}
