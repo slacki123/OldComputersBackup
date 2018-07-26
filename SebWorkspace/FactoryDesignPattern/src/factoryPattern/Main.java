@@ -23,6 +23,8 @@ public class Main {
 		System.out.println(obj.getObjectCoordinates());
 		System.out.println(obj.getAttribute());
 		
+		
+		
 //		for(int j = 0; j<list.size(); j++) {
 //			System.out.println(list.get(j));
 //		}

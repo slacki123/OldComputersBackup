@@ -1,0 +1,58 @@
+package ui;
+
+import javafx.application.Application;
+import javafx.geometry.Insets;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
+import javafx.stage.Stage;
+
+public class MultipleChoiceQuestionUI extends Application {
+
+	public void start(Stage primaryStage) throws Exception {
+		
+			
+			Label titleLabel = new Label(" Select your word set");
+			titleLabel.setFont(Font.font("Tahoma", FontWeight.NORMAL, 25));
+			titleLabel.setStyle("-fx-border-color: white;");
+			
+			Button set1 = new Button("Set 1");
+			set1.setStyle("-fx-font-size: 20pt;");
+			Button set2 = new Button("Set 2");
+			set2.setStyle("-fx-font-size: 20pt;");
+			Button set3 = new Button("Set 3");
+			set3.setStyle("-fx-font-size: 20pt;");
+			Button set4 = new Button("Set 4");
+			set4.setStyle("-fx-font-size: 20pt;");
+			
+			HBox title = new HBox();
+			HBox body = new HBox();
+			VBox all = new VBox();
+					
+
+			
+			
+			title.getChildren().addAll(titleLabel);
+			body.getChildren().addAll(grid);
+			all.getChildren().addAll(title,body);
+			
+
+
+			Scene scene = new Scene(all, 300, 300);
+
+			primaryStage.setTitle("Select Word Set");
+			primaryStage.setScene(scene);
+			primaryStage.show();
+		
+	}
+	
+	
+	
+	
+
+}
